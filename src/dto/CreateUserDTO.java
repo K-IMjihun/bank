@@ -1,10 +1,11 @@
-public class CreateUserData {
+package dto;
+
+public class CreateUserDTO { // Model
   private String name;
   private String RRN;
   private String ID;
   private String PW;
-  private int money;
-  private int accountNumber;
+  private long money;
 
   public String getName() {
     return name;
@@ -34,28 +35,19 @@ public class CreateUserData {
     this.PW = PW;
   }
 
-  public int getMoney(){
+  public long getMoney() {
     return money;
   }
-  public void setMoney(int money){
+
+  public void setMoney(long money) {
     this.money = money;
   }
 
-  public int getAccountNumber() {
-    return accountNumber;
-  }
-  public void setAccountNumber(int accountNumber) {
-    this.accountNumber = accountNumber;
-  }
-
-
-  public CreateUserData(String name, String RRN, String ID, String PW, int money, int accountNumber) {
+  public CreateUserDTO(String name, String RRN, String ID, String PW) {
     this.name = name;
     this.RRN = RRN;
     this.ID = ID;
     this.PW = PW;
-    this.money = money;
-    this.accountNumber = accountNumber;
   }
 
 }
